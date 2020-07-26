@@ -1,0 +1,187 @@
+<html> 
+<head> 
+<title>Registration Page</title>
+<script> 
+function validate()                                    
+{ 
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["Contact"];  
+    var day =  document.forms["RegForm"]["Daytxt"];
+    var month =  document.forms["RegForm"]["Monthtxt"];
+    var year =  document.forms["RegForm"]["Yeartxt"];
+    var gender =  document.forms["RegForm"]["Gendertxt"];
+    var password = document.forms["RegForm"]["Password"];  
+    
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    }
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+    if (phone.value == "" || phone.value.length!=10)                                   
+    { 
+        window.alert("Please enter a valid phone number,it must contain 10 digits."); 
+        email.focus(); 
+        return false; 
+    }
+    
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+   
+    if (day.selectedIndex < 1)                  
+    { 
+        alert("Please enter your day of birth."); 
+        day.focus(); 
+        return false; 
+    } 
+    if (month.selectedIndex < 1)                  
+    { 
+        alert("Please enter your month of birth."); 
+        month.focus(); 
+        return false; 
+    } 
+    if (year.selectedIndex < 1)                  
+    { 
+        alert("Please enter your year of birth."); 
+        year.focus(); 
+        return false; 
+    } 
+    if (year.selectedIndex < 1)                  
+    { 
+        alert("Please enter your gender."); 
+        gender.focus(); 
+        return false; 
+    } 
+    if (gender.selectedIndex < 1)                  
+    { 
+        alert("Please enter your gender."); 
+        gender.focus(); 
+        return false; 
+    }
+   
+    return true; 
+}</script> 
+  
+<style>    
+div {  
+    box-sizing: border-box; 
+    width: 100%; 
+    border: 100px solid black; 
+    float: left; 
+    align-content: center; 
+    align-items: center; 
+} 
+   
+form {                                         
+    margin: 0 auto; 
+    width: 600px; 
+}</style></head> 
+   
+<body> 
+<br>
+<h1 style="text-align: center"> REGISTRATION FORM </h1><br>          
+<form name="RegForm" action="#" onsubmit="return validate()" method="post">  
+      
+    <p>Name: <input type="text" size=65 name="Name"> </p><br>        
+    <p>E-mail: <input type="email" pattern="[^ @]*@[^ @]*" size=65 name="EMail">  </p><br> 
+     <p>Password: <input type="password" size=65 name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required> </p><br> 
+    <p>Contact: <input type="number" size=65 name="Contact"> </p><br>   
+    <p>Date Of Birth:
+			<select name="Daytxt">
+				<option value="-1">--Day--</option>
+				<option value="01">01</option>
+				<option value="02">02</option>
+				<option value="03">03</option>
+				<option value="04">04</option>
+				<option value="05">05</option>
+				<option value="06">06</option>
+				<option value="07">07</option>
+				<option value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+			</select>
+			<select name="Monthtxt">
+				<option value="-1">--Month--</option>
+				<option value="1">January</option>
+				<option value="2">February</option>
+				<option value="3">March</option>
+				<option value="4">April</option>
+				<option value="5">May</option>
+				<option value="6">June</option>
+				<option value="7">July</option>
+				<option value="8">August</option>
+				<option value="9">September</option>
+				<option value="10">October</option>
+				<option value="11">November</option>
+				<option value="12">December</option>
+			</select>
+			<select name="Yertxt">
+				<option value="-1">--Year--</option>
+				<option value="1">2010</option>
+				<option value="2">2009</option>
+				<option value="3">2008</option>
+				<option value="4">2007</option>
+				<option value="5">2006</option>
+				<option value="6">2005</option>
+				<option value="7">2004</option>
+				<option value="8">2003</option>
+				<option value="9">2002</option>
+				<option value="10">2001</option>
+				<option value="11">2000</option>
+				<option value="12">1999</option>
+				<option value="13">1998</option>
+				<option value="14">1997</option>
+				<option value="15">1996</option>
+				<option value="16">1995</option>
+				<option value="17">1994</option>
+				<option value="18">1993</option>
+			</select>
+			</p><br>
+	<p>
+	Gender:
+			<select name="Gendertxt">
+				<option value="-1">--Gender</option>
+				<option value="1">Female</option>
+				<option value="2">Male</option>
+			</select><br><br>
+	</p><br>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<input type="submit" value="Submit" name="Submit">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  
+        <input type="reset" value="Reset" name="Reset">   
+    </p>          
+</form> 
+</body> 
+</html> 
